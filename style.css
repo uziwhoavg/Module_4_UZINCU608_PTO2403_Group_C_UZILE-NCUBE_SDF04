@@ -1,5 +1,17 @@
+html{
+    max-height: fit-content;
+    max-width: fit-content;
+
+}
+
 body {
-    background: #eeefed;
+    display: block;
+    margin: auto;
+    background: url(BACKGROUND/bckg.jpeg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 a {
@@ -17,18 +29,39 @@ a {
 h1 {
     position: relative;
     text-align: center;
-    color: #353535;
+    color: red;
     font-size: 50px;
-    font-family: "Calibri", sans-serif;
+    font-family: "Optician Sans", sans-serif;
+    animation-name: colour;
+    animation-duration: 10s; 
+    animation-iteration-count: infinite;
 }
-
+@keyframes colour {
+    0%   {color: red;}
+    5%  {color: orange;}
+    15%  {color: yellow;}
+    25% {color: green;}
+    45%  {color: rgb(6, 164, 250);}
+    75%  {color: rgb(132, 0, 255);}
+    100% {color: rgb(218, 5, 94);}
+  }
 p {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
     text-align: center;
-    font-size: 18px;
-    color: #676767;
+    font-size:25px ;
+    font-style: normal;
+    color: #ffffff;
     margin-bottom: 40px;
+    background-color: #0d95be ;
+}
+.frame {
+    width: 20%;
+    margin: 40px auto;
+    text-align: center;
+}
+button{
+    margin: 20px;
 }
 
 .custom-btn {
@@ -37,18 +70,62 @@ p {
     color: #000;
     border-radius: 5px;
     padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     font-weight: 500;
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
     display: block;
-    margin: 0 auto 20px; /* Center and add margin to stack vertically */
+    margin: 0 auto 20px; 
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
         7px 7px 20px 0px rgba(0, 0, 0, .1),
         4px 4px 5px 0px rgba(0, 0, 0, .1);
     outline: none;
 }
 
-/* Add your custom styles for btn-1, btn-2, and btn-3 */
+.btn-1:hover:hover {
+    transform: scale(1.05);
+}
+
+.btn-1:active {
+    transform: scale(0.95);
+}
+
+/* Color change for btn-1 */
+.btn-1 {
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-1:hover {
+    background-color: #45a049;
+}
+
+/* Pulsating color for btn-2 */
+.btn-2 {
+    background-color: #ff5733;
+    color: white;
+    animation: pulsate 1s infinite alternate;
+}
+
+@keyframes pulsate {
+    0% {
+        background-color: #33daff;
+    }
+    100% {
+        background-color: #ff8c66;
+    }
+}
+
+/* Gradient change for btn-3 */
+.btn-3 {
+    background: linear-gradient(45deg, #ffcc00, #ff3300);
+    color: rgb(0, 0, 0);
+    transition: background 0.3s ease;
+}
+
+.btn-3:hover {
+    background: linear-gradient(45deg, #ff6600, #cc0000);
+}
